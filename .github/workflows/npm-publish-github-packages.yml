@@ -15,6 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+      - run: yarn test:ci
       - run: npm clean install
       - run: npm test
 
