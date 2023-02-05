@@ -5,6 +5,7 @@ name: Node.js Package
 
 on:
   workflow_dispatch:
+  
  
 jobs:
   build:
@@ -14,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm@5 ci
+      - run: npm clean install
       - run: npm test
 
   publish-gpr:
